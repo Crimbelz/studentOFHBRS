@@ -1,5 +1,8 @@
 package org.hbrs.s1.ws22.uebung1.view;
 
+import org.hbrs.s1.ws22.uebung1.control.Factory;
+import org.hbrs.s1.ws22.uebung1.control.Translator;
+
 public class Client {
 
 		/*
@@ -12,6 +15,8 @@ public class Client {
 			//
 			// Strenge Implementierung gegen das Interface Translator gewuenscht!
 
+			Translator translator = Factory.createGermanTranslator();
+			String result = translator.translateNumeber(2);
 			System.out.println("Das Ergebnis der Berechnung: " +
 					"[das Ergebnis an dieser Stelle]"  );
 

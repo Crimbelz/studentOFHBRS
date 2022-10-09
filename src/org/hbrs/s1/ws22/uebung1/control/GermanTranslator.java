@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class GermanTranslator implements Translator {
 
 	public String date = "Okt/2022"; // Default-Wert
-	private static final HashMap<Integer, String> map = new HashMap<Integer, String>();
+	private static HashMap<Integer, String> map = new HashMap<Integer, String>();
 	static  {
 		map.put(1, "eins");
 		map.put(2, "zwei");
@@ -24,8 +24,7 @@ public class GermanTranslator implements Translator {
 	 */
 	public String translateNumber( int number ) {
 		// [ihr Source Code aus Übung 1-2]
-		return map.getOrDefault(number, "Übersetzung der Zahl "
-							  + number + " nicht möglich (" + version + ")");
+		return map.getOrDefault(number, "Übersetzung der Zahl "+ number +" nicht möglich ("+version+")");
 	}
 
 	/**
